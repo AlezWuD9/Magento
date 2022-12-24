@@ -1,0 +1,79 @@
+<?php
+/**
+ * @package Goomento_PageBuilder
+ * @link https://github.com/Goomento/PageBuilder
+ */
+
+declare(strict_types=1);
+
+use Goomento\PageBuilder\Block\View\Element\Widget;
+use Goomento\PageBuilder\Builder\Controls\Groups\ImageSizeGroup;
+
+/**
+ * @var Widget $block
+ */
+$widget = $block->getWidget();
+$settings = $widget->getSettingsForDisplay();
+$hasContent = !empty($settings['title_text']) || !empty($settings['description_text']);
+?>
+<div class="gmt-image-box-wrapper">
+    <?php
+    if (!empty($settings['link']['url'])) {
+        $widget->addRenderAttribute('link', 'href', $settings['link']['url']);
+
+        if ($settings['link']['is_external']) {
+            $widget->addRenderAttribute('link', 'target', '_blank');
+        }
+
+        if (!empty($settings['link']['nofollow'])) {
+            $widget->addRenderAttribute('link', 'rel', 'nofollow');
+        }
+    }
+
+    if (!empty($settings['image']['url'])) {
+
+        $imageHtml = ImageSizeGroup::getAttachmentImageHtml($settings);
+
+        if (!empty($settings['link']['url'])) {
+            $imageHtml = '<a ' . $widget->getRenderAttributeString('link') . '>' . $imageHtml . '</a>';
+        }
+        ?>
+        <figure class="gmt-image-box-img"><?=  /** @noEscape */ $imageHtml ?></figure>
+        <?php
+    }
+
+    if ($hasContent): ?>
+        <div class="gmt-image-box-content">
+            <?php
+            if (!empty($settings['title_text'])):
+                $widget->addRenderAttribute('title_text', 'class', 'gmt-image-box-title');
+
+                $widget->addInlineEditingAttributes('title_text', 'none');
+
+                $titleHtml = /** @noEscape */ $settings['title_text'];
+
+                if (!empty($settings['link']['url'])) {
+                    $titleHtml = '<a ' . $widget->getRenderAttributeString('link') . '>' . $titleHtml . '</a>';
+                }
+
+                ?>
+                <<?=  /** @noEscape */ $settings['title_size'] ?> <?= /** @noEscape */ $widget->getRenderAttributeString('title_text') ?>>
+                    <?=  /** @noEscape */ $titleHtml ?>
+                </<?=  /** @noEscape */ $settings['title_size'] ?>>
+                <?php
+            endif;
+
+            if (!empty($settings['description_text'])):
+                $widget->addRenderAttribute('description_text', 'class', 'gmt-image-box-description');
+
+                $widget->addInlineEditingAttributes('description_text');
+
+                ?>
+                <p <?= /** @noEscape */ $widget->getRenderAttributeString('description_text') ?>>
+                    <?= /** @noEscape */ $settings['description_text'] ?>
+                </p>
+            <?php endif ?>
+        </div>
+    <?php endif; ?>
+</div>
+

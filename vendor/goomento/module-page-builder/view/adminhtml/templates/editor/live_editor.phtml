@@ -1,0 +1,39 @@
+<?php
+/**
+ * @package Goomento_PageBuilder
+ * @link https://github.com/Goomento/PageBuilder
+ */
+
+declare(strict_types=1);
+
+/**
+ * @var Template $block
+ */
+
+use Magento\Backend\Block\Template;
+
+?>
+<div id="root">
+    <div id="gmt-editor-wrapper">
+        <div id="gmt-panel" class="gmt-panel"></div>
+        <div id="gmt-controls" class="gmt-controls"></div>
+        <div id="gmt-controller" class="gmt-controller"></div>
+        <div id="gmt-preview">
+            <div id="gmt-header-toolbar"></div>
+            <div id="gmt-loading">
+                <div class="gmt-loader-wrapper">
+                    <i class="goomento-logo gmt-loader"></i>
+                    <div class="lds-ripple"><div></div><div></div></div>
+                    <div class="gmt-loading-title"><?= $block->escapeHtml(__('Loading')); ?></div>
+                </div>
+            </div>
+            <div id="gmt-preview-responsive-wrapper" class="gmt-device-desktop gmt-device-rotate-portrait">
+                <div id="gmt-preview-loading">
+                    <i class="fa-circle-notch fas spinning" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div id="gmt-navigator"></div>
+    </div>
+    <?= $block->getChildHtml() ?>
+</div>

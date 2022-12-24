@@ -1,0 +1,136 @@
+[2022-12-23 15:59:34] main.DEBUG: array (
+  'request' => 
+  array (
+    'requestId' => '1671811174000',
+    'amount' => '1009438',
+    'orderId' => '000000001',
+    'orderInfo' => 'Default Store View',
+    'returnUrl' => 'http://localhost/magento22/momo/payment/return/',
+    'notifyUrl' => 'http://localhost/magento22/momo/payment/ipn/',
+    'extraData' => 'merchantName=Momo Partner',
+    'signature' => 'f05d278a959354ecf9c61a5708afce01e9f16880973cd88d88014eb0dbdf860c',
+    'requestType' => 'captureMoMoWallet',
+  ),
+  'request_uri' => 'https://test-payment.momo.vn/gw_payment/transactionProcessor',
+  'response' => 
+  array (
+    'errorCode' => 42,
+    'message' => 'Bad request',
+    'localMessage' => 'Dữ liệu sai định dạng',
+    'details' => 
+    array (
+      0 => 
+      array (
+        'field' => 'partnerCode',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+      1 => 
+      array (
+        'field' => 'accessKey',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+    ),
+  ),
+) [] []
+[2022-12-23 16:04:52] main.DEBUG: array (
+  'request' => 
+  array (
+    'requestId' => '1671811492000',
+    'amount' => '425709',
+    'orderId' => '000000002',
+    'orderInfo' => 'Default Store View',
+    'returnUrl' => 'http://localhost/magento22/momo/payment/return/',
+    'notifyUrl' => 'http://localhost/magento22/momo/payment/ipn/',
+    'extraData' => 'merchantName=Momo Partner',
+    'signature' => '1680ff4f7fdeae3440dd17d7a6b999a72dafe802a5c874e7b5d6d83ff6b2eb9c',
+    'requestType' => 'captureMoMoWallet',
+  ),
+  'request_uri' => 'https://test-payment.momo.vn/gw_payment/transactionProcessor',
+  'response' => 
+  array (
+    'errorCode' => 42,
+    'message' => 'Bad request',
+    'localMessage' => 'Dữ liệu sai định dạng',
+    'details' => 
+    array (
+      0 => 
+      array (
+        'field' => 'partnerCode',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+      1 => 
+      array (
+        'field' => 'accessKey',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+    ),
+  ),
+) [] []
+[2022-12-23 16:56:49] main.DEBUG: array (
+  'request' => 
+  array (
+    'requestId' => '1671814609000',
+    'amount' => '850239',
+    'orderId' => '000000003',
+    'orderInfo' => 'Default Store View',
+    'returnUrl' => 'http://localhost/magento22/momo/payment/return/',
+    'notifyUrl' => 'http://localhost/magento22/momo/payment/ipn/',
+    'extraData' => 'merchantName=Momo Partner',
+    'signature' => '71eb305c5decc5a2faeaab8fa0c60cfc76ef9fbb7ca8f21333731f8341d16e45',
+    'requestType' => 'captureMoMoWallet',
+  ),
+  'request_uri' => 'https://test-payment.momo.vn/gw_payment/transactionProcessor',
+  'response' => 
+  array (
+    'errorCode' => 42,
+    'message' => 'Bad request',
+    'localMessage' => 'Dữ liệu sai định dạng',
+    'details' => 
+    array (
+      0 => 
+      array (
+        'field' => 'partnerCode',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+      1 => 
+      array (
+        'field' => 'accessKey',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+    ),
+  ),
+) [] []
+[2022-12-24 04:19:16] main.DEBUG: array (
+  'request' => 
+  array (
+    'requestId' => '1671855556000',
+    'amount' => '426889',
+    'orderId' => '000000004',
+    'orderInfo' => 'Default Store View',
+    'returnUrl' => 'http://localhost/magento22/momo/payment/return/',
+    'notifyUrl' => 'http://localhost/magento22/momo/payment/ipn/',
+    'extraData' => 'merchantName=Momo Partner',
+    'signature' => 'b30f3598e8773138dc405a1e0259b7d11232cb0362c4c754af4606bd52363697',
+    'requestType' => 'captureMoMoWallet',
+  ),
+  'request_uri' => 'https://test-payment.momo.vn/gw_payment/transactionProcessor',
+  'response' => 
+  array (
+    'errorCode' => 42,
+    'message' => 'Bad request',
+    'localMessage' => 'Dữ liệu sai định dạng',
+    'details' => 
+    array (
+      0 => 
+      array (
+        'field' => 'partnerCode',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+      1 => 
+      array (
+        'field' => 'accessKey',
+        'description' => 'Invalid value. Field must not be empty',
+      ),
+    ),
+  ),
+) [] []
